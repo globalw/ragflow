@@ -5,22 +5,22 @@ mysql:
   name: 'rag_flow'
   user: 'root'
   password: 'infini_rag_flow'
-  host: 'mysql'
-  port: 3306
+  host: '127.0.0.1'  # Access MySQL on localhost
+  port: 5455  # Replace with the value of MYSQL_PORT in your .env
   max_connections: 100
   stale_timeout: 30
 minio:
   user: 'rag_flow'
   password: 'infini_rag_flow'
-  host: 'minio:9000'
+  host: '127.0.0.1:9000'  # Access Minio on localhost
 es:
-  hosts: 'http://es01:9200'
+  hosts: 'http://127.0.0.1:1200'  # Access Elasticsearch on localhost
   username: 'elastic'
   password: 'infini_rag_flow'
 redis:
   db: 1
   password: 'infini_rag_flow'
-  host: 'redis:6379'
+  host: '127.0.0.1:6379'  # Access Redis on localhost
 user_default_llm:
   factory: 'Tongyi-Qianwen'
   api_key: 'sk-xxxxxxxxxxxxx'
