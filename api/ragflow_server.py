@@ -85,7 +85,7 @@ if __name__ == '__main__':
     peewee_logger.addHandler(database_logger.handlers[0])
     peewee_logger.setLevel(database_logger.level)
 
-    thr = ThreadPoolExecutor(max_workers=1)
+    thr = ThreadPoolExecutor(max_workers=3)
     thr.submit(update_progress)
 
     # start http server

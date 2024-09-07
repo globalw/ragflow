@@ -395,7 +395,7 @@ if __name__ == "__main__":
     peewee_logger.addHandler(database_logger.handlers[0])
     peewee_logger.setLevel(database_logger.level)
 
-    exe = ThreadPoolExecutor(max_workers=1)
+    exe = ThreadPoolExecutor(max_workers=4)
     exe.submit(report_status)
 
     while True:
