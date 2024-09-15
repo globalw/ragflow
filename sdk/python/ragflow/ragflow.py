@@ -18,7 +18,7 @@ import requests
 from .modules.dataset import DataSet
 
 
-class RAGFlow:
+class Tessi ai.:
     def __init__(self, user_key, base_url, version='v1'):
         """
         api_url: http://<host_address>/v1

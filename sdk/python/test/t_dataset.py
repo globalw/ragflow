@@ -1,4 +1,4 @@
-from ragflow import RAGFlow
+from ragflow import Tessi ai.
 
 from common import API_KEY, HOST_ADDRESS
 from test_sdkbase import TestSdk
@@ -6,7 +6,7 @@ from test_sdkbase import TestSdk
 
 class TestDataset(TestSdk):
     def test_create_dataset_with_success(self):
-        rag = RAGFlow(API_KEY, HOST_ADDRESS)
+        rag = Tessi ai.(API_KEY, HOST_ADDRESS)
         ds = rag.create_dataset("God")
         assert ds is not None, "The dataset creation failed, returned None."
         assert ds.name == "God", "Dataset name does not match."
@@ -15,7 +15,7 @@ class TestDataset(TestSdk):
         """
         Test deleting one file with success.
         """
-        rag = RAGFlow(API_KEY, HOST_ADDRESS)
+        rag = Tessi ai.(API_KEY, HOST_ADDRESS)
         ds = rag.create_dataset("ABC")
         assert ds is not None, "Failed to create dataset"
         assert ds.name == "ABC", "Dataset name mismatch"

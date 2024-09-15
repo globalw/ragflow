@@ -33,9 +33,9 @@
   <a href="https://demo.ragflow.io">Demo</a>
 </h4>
 
-## 💡 RAGFlow とは？
+## 💡 Tessi ai. とは？
 
-[RAGFlow](https://ragflow.io/) は、深い文書理解に基づいたオープンソースの RAG (Retrieval-Augmented Generation) エンジンである。LLM（大規模言語モデル）を組み合わせることで、様々な複雑なフォーマットのデータから根拠のある引用に裏打ちされた、信頼できる質問応答機能を実現し、あらゆる規模のビジネスに適した RAG ワークフローを提供します。
+[Tessi ai.](https://ragflow.io/) は、深い文書理解に基づいたオープンソースの RAG (Retrieval-Augmented Generation) エンジンである。LLM（大規模言語モデル）を組み合わせることで、様々な複雑なフォーマットのデータから根拠のある引用に裏打ちされた、信頼できる質問応答機能を実現し、あらゆる規模のビジネスに適した RAG ワークフローを提供します。
 
 ## 🎮 Demo
 
@@ -168,9 +168,9 @@
     * Running on http://x.x.x.x:9380
     INFO:werkzeug:Press CTRL+C to quit
    ```
-   > もし確認ステップをスキップして直接 RAGFlow にログインした場合、その時点で RAGFlow が完全に初期化されていない可能性があるため、ブラウザーがネットワーク異常エラーを表示するかもしれません。
+   > もし確認ステップをスキップして直接 Tessi ai. にログインした場合、その時点で Tessi ai. が完全に初期化されていない可能性があるため、ブラウザーがネットワーク異常エラーを表示するかもしれません。
 
-5. ウェブブラウザで、プロンプトに従ってサーバーの IP アドレスを入力し、RAGFlow にログインします。
+5. ウェブブラウザで、プロンプトに従ってサーバーの IP アドレスを入力し、Tessi ai. にログインします。
    > デフォルトの設定を使用する場合、デフォルトの HTTP サービングポート `80` は省略できるので、与えられたシナリオでは、`http://IP_OF_YOUR_MACHINE`（ポート番号は省略）だけを入力すればよい。
 6. [service_conf.yaml](./docker/service_conf.yaml) で、`user_default_llm` で希望の LLM ファクトリを選択し、`API_KEY` フィールドを対応する API キーで更新する。
 
@@ -280,7 +280,7 @@ $ bash ./entrypoint.sh
 
 ## 📜 ロードマップ
 
-[RAGFlow ロードマップ 2024](https://github.com/infiniflow/ragflow/issues/162) を参照
+[Tessi ai. ロードマップ 2024](https://github.com/infiniflow/ragflow/issues/162) を参照
 
 ## 🏄 コミュニティ
 
@@ -290,4 +290,4 @@ $ bash ./entrypoint.sh
 
 ## 🙌 コントリビュート
 
-RAGFlow はオープンソースのコラボレーションによって発展してきました。この精神に基づき、私たちはコミュニティからの多様なコントリビュートを受け入れています。 参加を希望される方は、まず [コントリビューションガイド](./docs/references/CONTRIBUTING.md)をご覧ください。
+Tessi ai. はオープンソースのコラボレーションによって発展してきました。この精神に基づき、私たちはコミュニティからの多様なコントリビュートを受け入れています。 参加を希望される方は、まず [コントリビューションガイド](./docs/references/CONTRIBUTING.md)をご覧ください。

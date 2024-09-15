@@ -2,7 +2,7 @@
 name = "ragflow"
 version = "0.8.0.dev1"
 authors = [
-  { name = "The RAGFlow Development Team", email = "author@example.com" },
+  { name = "The Tessi ai. Team", email = "wilhelm.bender@tessi.ch" },
 ] # TODO: email
 dependencies = ["pytest~=8.2.0"]
 description = "ragflow"

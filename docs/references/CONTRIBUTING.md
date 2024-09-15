@@ -5,7 +5,7 @@ slug: /contribution_guidelines
 
 # Contribution guidelines
 
-Thanks for wanting to contribute to RAGFlow. This document offers guidlines and major considerations for submitting your contributions. 
+Thanks for wanting to contribute to Tessi ai.. This document offers guidlines and major considerations for submitting your contributions. 
 
 - To report a bug, file a [GitHub issue](https://github.com/infiniflow/ragflow/issues/new/choose) with us.
 - For further questions, you can explore existing discussions or initiate a new one in [Discussions](https://github.com/orgs/infiniflow/discussions).

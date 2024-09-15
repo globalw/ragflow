@@ -44,7 +44,7 @@ export default {
       nicknamePlaceholder: 'Please input nickname',
       register: 'Create an account',
       continue: 'Continue',
-      title: 'Start building your smart assistants.',
+      title: 'Tessi ai.',
       description:
         'Sign up for free to explore top RAG technology. Create knowledge bases and AIs to empower your business.',
       review: 'from 500+ reviews',
@@ -239,7 +239,7 @@ export default {
       The résumé comes in a variety of formats, just like a person’s personality, but we often have to organize them into structured data that makes it easy to search.
       </p><p>
       Instead of chunking the résumé, we parse the résumé into structured data. As a HR, you can dump all the résumé you have, 
-      the you can list all the candidates that match the qualifications just by talk with <i>'RAGFlow'</i>.
+      the you can list all the candidates that match the qualifications just by talk with <i>'tessi ai.'</i>.
       </p>
       `,
       table: `<p><b>EXCEL</b> and <b>CSV/TXT</b> format files are supported.</p><p>

@@ -35,7 +35,7 @@
 
 ## 💡 RAGFlow란?
 
-[RAGFlow](https://ragflow.io/)는 심층 문서 이해에 기반한 오픈소스 RAG (Retrieval-Augmented Generation) 엔진입니다. 이 엔진은 대규모 언어 모델(LLM)과 결합하여 정확한 질문 응답 기능을 제공하며, 다양한 복잡한 형식의 데이터에서 신뢰할 수 있는 출처를 바탕으로 한 인용을 통해 이를 뒷받침합니다. RAGFlow는 규모에 상관없이 모든 기업에 최적화된 RAG 워크플로우를 제공합니다.
+[Tessi ai.](https://ragflow.io/)는 심층 문서 이해에 기반한 오픈소스 RAG (Retrieval-Augmented Generation) 엔진입니다. 이 엔진은 대규모 언어 모델(LLM)과 결합하여 정확한 질문 응답 기능을 제공하며, 다양한 복잡한 형식의 데이터에서 신뢰할 수 있는 출처를 바탕으로 한 인용을 통해 이를 뒷받침합니다. RAGFlow는 규모에 상관없이 모든 기업에 최적화된 RAG 워크플로우를 제공합니다.
 
 
 
@@ -147,7 +147,7 @@
 
 3. 미리 빌드된 Docker 이미지를 생성하고 서버를 시작하세요:
 
-   > 다음 명령어를 실행하면 *dev* 버전의 RAGFlow Docker 이미지가 자동으로 다운로드됩니다. 특정 Docker 버전을 다운로드하고 실행하려면, **docker/.env** 파일에서 `RAGFLOW_VERSION`을 원하는 버전으로 업데이트한 후, 예를 들어 `RAGFLOW_VERSION=v0.10.0`로 업데이트 한 뒤, 다음 명령어를 실행하세요.
+   > 다음 명령어를 실행하면 *dev* 버전의 Tessi ai. Docker 이미지가 자동으로 다운로드됩니다. 특정 Docker 버전을 다운로드하고 실행하려면, **docker/.env** 파일에서 `RAGFLOW_VERSION`을 원하는 버전으로 업데이트한 후, 예를 들어 `RAGFLOW_VERSION=v0.10.0`로 업데이트 한 뒤, 다음 명령어를 실행하세요.
    ```bash
    $ cd ragflow/docker
    $ chmod +x ./entrypoint.sh
@@ -249,7 +249,7 @@ $ docker compose up -d
    ```bash
    # 파이썬 경로를 받아옵니다:
    $ which python
-   # RAGFlow 프로젝트 경로를 받아옵니다:
+   # Tessi ai. 프로젝트 경로를 받아옵니다:
    $ pwd
    ```
    
@@ -280,7 +280,7 @@ $ docker compose up -d
   - **service_conf.yaml**의 관련 서비스에 대한 IP 주소와 포트가 로컬 머신의 IP 주소와 컨테이너에서 노출된 포트와 일치하는지 확인합니다.
 
 
-6. RAGFlow 백엔드 서비스를 시작합니다:
+6. Tessi ai. 백엔드 서비스를 시작합니다:
 
    ```bash
    $ chmod +x ./entrypoint.sh
@@ -321,7 +321,7 @@ $ docker compose up -d
 
 ## 📜 로드맵
 
-[RAGFlow 로드맵 2024](https://github.com/infiniflow/ragflow/issues/162)을 확인하세요.
+[Tessi ai. 로드맵 2024](https://github.com/infiniflow/ragflow/issues/162)을 확인하세요.
 
 ## 🏄 커뮤니티
 

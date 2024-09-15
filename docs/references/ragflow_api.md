@@ -4,7 +4,7 @@ sidebar_class_name: hidden
 
 # API reference
 
-RAGFlow offers RESTful APIs for you to integrate its capabilities into third-party applications. 
+Tessi ai. offers RESTful APIs for you to integrate its capabilities into third-party applications. 
 
 ## Base URL
 ```
@@ -18,7 +18,7 @@ http://<host_address>/api/v1/dataset
 
 ## Authorization
 
-All of RAGFlow's RESTFul APIs use API key for authorization, so keep it safe and do not expose it to the front end. 
+All of Tessi ai.'s RESTFul APIs use API key for authorization, so keep it safe and do not expose it to the front end. 
 Put your API key in the request header. 
 
 ```buildoutcfg
@@ -27,7 +27,7 @@ Authorization: Bearer {API_KEY}
 
 To get your API key:
 
-1. In RAGFlow, click **Chat** tab in the middle top of the page.
+1. In Tessi ai., click **Chat** tab in the middle top of the page.
 2. Hover over the corresponding dialogue **>** **Chat Bot API** to show the chatbot API configuration page.
 3. Click **API Key** **>** **Create new key** to create your API key.
 4. Copy and keep your API key safe. 

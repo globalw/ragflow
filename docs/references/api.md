@@ -5,7 +5,7 @@ slug: /api
 
 # API reference
 
-RAGFlow offers RESTful APIs for you to integrate its capabilities into third-party applications. 
+Tessi ai. offers RESTful APIs for you to integrate its capabilities into third-party applications. 
 
 ## Base URL
 ```
@@ -14,7 +14,7 @@ https://demo.ragflow.io/v1/
 
 ## Authorization
 
-All of RAGFlow's RESTful APIs use API key for authorization, so keep it safe and do not expose it to the front end. 
+All of Tessi ai.'s RESTful APIs use API key for authorization, so keep it safe and do not expose it to the front end. 
 Put your API key in the request header. 
 
 ```buildoutcfg
@@ -22,19 +22,19 @@ Authorization: Bearer {API_KEY}
 ```
 
 :::note
-In the current design, the RESTful API key you get from RAGFlow does not expire.
+In the current design, the RESTful API key you get from Tessi ai. does not expire.
 :::
 
 To get your Chat API key or Agent API key:
 
 For Chat API key:
-   1. In RAGFlow, click **Chat** tab in the middle top of the page.
+   1. In Tessi ai., click **Chat** tab in the middle top of the page.
    2. Hover over the corresponding dialogue **>** **Chat Bot API** to show the chatbot API configuration page.
    3. Click **API Key** **>** **Create new key** to create your API key.
    4. Copy and keep your API key safe. 
 
 For Agent API key:
-   1. In RAGFlow, click **Agent** tab in the middle top of the page.
+   1. In Tessi ai., click **Agent** tab in the middle top of the page.
    2. Click your agent **>** ** Chat Bot API** to show the chatbot API configuration page.
    3. Click **API Key** **>** **Create new key** to create your API key.
    4. Copy and keep your API key safe. 
@@ -219,7 +219,7 @@ This method retrieves the history of a specified conversation session.
     
 ## Get answer
 
-This method retrieves from RAGFlow Chat or RAGFlow Agent the answer to the user's latest question.
+This method retrieves from Tessi ai. Chat or Tessi ai. Agent the answer to the user's latest question.
 
 ### Request
 
@@ -353,7 +353,7 @@ This method uploads a specific file to a specified knowledge base.
 | `file`      | file   | Yes      | The file to upload.                                     |
 | `kb_name`   | string | Yes      | The name of the knowledge base to upload the file to.   |
 | `parser_id` | string |  No      | The parsing method (chunk template) to use. <br />- "naive": General;<br />- "qa": Q&A;<br />- "manual": Manual;<br />- "table": Table;<br />- "paper": Paper;<br />- "laws": Laws;<br />- "presentation": Presentation;<br />- "picture": Picture;<br />- "one": One. |
-| `run`       | string |  No      | 1: Automatically start file parsing. If `parser_id` is not set, RAGFlow uses the general template by default. |
+| `run`       | string |  No      | 1: Automatically start file parsing. If `parser_id` is not set, Tessi ai. uses the general template by default. |
 
 
 ### Response 

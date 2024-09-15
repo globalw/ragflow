@@ -7,14 +7,14 @@ slug: /faq
 
 ## General
 
-### 1. What sets RAGFlow apart from other RAG products?
+### 1. What sets Tessi ai. apart from other RAG products?
 
-The "garbage in garbage out" status quo remains unchanged despite the fact that LLMs have advanced Natural Language Processing (NLP) significantly. In response, RAGFlow introduces two unique features compared to other Retrieval-Augmented Generation (RAG) products.
+The "garbage in garbage out" status quo remains unchanged despite the fact that LLMs have advanced Natural Language Processing (NLP) significantly. In response, Tessi ai. introduces two unique features compared to other Retrieval-Augmented Generation (RAG) products.
 
 - Fine-grained document parsing: Document parsing involves images and tables, with the flexibility for you to intervene as needed.
-- Traceable answers with reduced hallucinations: You can trust RAGFlow's responses as you can view the citations and references supporting them.
+- Traceable answers with reduced hallucinations: You can trust Tessi ai.'s responses as you can view the citations and references supporting them.
 
-### 2. Which languages does RAGFlow support?
+### 2. Which languages does Tessi ai. support?
 
 English, simplified Chinese, traditional Chinese for now. 
 
@@ -33,23 +33,23 @@ English, simplified Chinese, traditional Chinese for now.
 
 ## Performance
 
-### 1. Why does it take longer for RAGFlow to parse a document than LangChain?
+### 1. Why does it take longer for Tessi ai. to parse a document than LangChain?
 
 We put painstaking effort into document pre-processing tasks like layout analysis, table structure recognition, and OCR (Optical Character Recognition) using our vision model. This contributes to the additional time required. 
 
-### 2. Why does RAGFlow require more resources than other projects?
+### 2. Why does Tessi ai. require more resources than other projects?
 
-RAGFlow has a number of built-in models for document structure parsing, which account for the additional computational resources.
+Tessi ai. has a number of built-in models for document structure parsing, which account for the additional computational resources.
 
 ## Feature
 
-### 1. Which architectures or devices does RAGFlow support?
+### 1. Which architectures or devices does Tessi ai. support?
 
 Currently, we only support x86 CPU and Nvidia GPU. 
 
 ### 2. Do you offer an API for integration with third-party applications?
 
-The corresponding APIs are now available. See the [RAGFlow API Reference](./api.md) for more information. 
+The corresponding APIs are now available. See the [Tessi ai. API Reference](./api.md) for more information. 
 
 ### 3. Do you support stream output?
 
@@ -68,7 +68,7 @@ This feature and the related APIs are still in development. Contributions are we
 
 ### 1. Issues with docker images
 
-#### 1.1 How to build the RAGFlow image from scratch?
+#### 1.1 How to build the Tessi ai. image from scratch?
 
 ```
 $ git clone https://github.com/infiniflow/ragflow.git
@@ -153,7 +153,7 @@ networks:
       com.docker.network.driver.mtu: 1450
 ```
 
-### 3. Issues with RAGFlow servers
+### 3. Issues with Tessi ai. servers
 
 #### 3.1 `WARNING: can't find /raglof/rag/res/borker.tm`
 
@@ -163,7 +163,7 @@ Ignore this warning and continue. All system warnings can be ignored.
 
 ![anomaly](https://github.com/infiniflow/ragflow/assets/93570324/beb7ad10-92e4-4a58-8886-bfb7cbd09e5d)
 
-You will not log in to RAGFlow unless the server is fully initialized. Run `docker logs -f ragflow-server`.
+You will not log in to Tessi ai. unless the server is fully initialized. Run `docker logs -f ragflow-server`.
 
 *The server is successfully initialized, if your system displays the following:*
 
@@ -182,7 +182,7 @@ You will not log in to RAGFlow unless the server is fully initialized. Run `dock
 ```
 
 
-### 4. Issues with RAGFlow backend services
+### 4. Issues with Tessi ai. backend services
 
 #### 4.1 `dependency failed to start: container ragflow-mysql is unhealthy`
 
@@ -198,21 +198,21 @@ Ignore this warning and continue. All system warnings can be ignored.
 
 ![stall](https://github.com/infiniflow/ragflow/assets/93570324/3589cc25-c733-47d5-bbfc-fedb74a3da50)
 
-Click the red cross beside the 'parsing status' bar, then restart the parsing process to see if the issue remains. If the issue persists and your RAGFlow is deployed locally, try the following: 
+Click the red cross beside the 'parsing status' bar, then restart the parsing process to see if the issue remains. If the issue persists and your Tessi ai. is deployed locally, try the following: 
 
-1. Check the log of your RAGFlow server to see if it is running properly:
+1. Check the log of your Tessi ai. server to see if it is running properly:
 ```bash
 docker logs -f ragflow-server
 ```
 2. Check if the **task_executor.py** process exists.
-3. Check if your RAGFlow server can access hf-mirror.com or huggingface.com.
+3. Check if your Tessi ai. server can access hf-mirror.com or huggingface.com.
 
 #### 4.4 Why does my pdf parsing stall near completion, while the log does not show any error?
 
-Click the red cross beside the 'parsing status' bar, then restart the parsing process to see if the issue remains. If the issue persists and your RAGFlow is deployed locally, the parsing process is likely killed due to insufficient RAM. Try increasing your memory allocation by increasing the `MEM_LIMIT` value in **docker/.env**.
+Click the red cross beside the 'parsing status' bar, then restart the parsing process to see if the issue remains. If the issue persists and your Tessi ai. is deployed locally, the parsing process is likely killed due to insufficient RAM. Try increasing your memory allocation by increasing the `MEM_LIMIT` value in **docker/.env**.
 
 :::note
-Ensure that you restart up your RAGFlow server for your changes to take effect!
+Ensure that you restart up your Tessi ai. server for your changes to take effect!
 ```bash
 docker compose stop
 ```
@@ -227,18 +227,18 @@ docker compose up -d
 
 An index failure usually indicates an unavailable Elasticsearch service.
 
-#### 4.6 How to check the log of RAGFlow?
+#### 4.6 How to check the log of Tessi ai.?
 
 ```bash
 tail -f path_to_ragflow/docker/ragflow-logs/rag/*.log
 ```
 
-#### 4.7 How to check the status of each component in RAGFlow?
+#### 4.7 How to check the status of each component in Tessi ai.?
 
 ```bash
 $ docker ps
 ```
-*The system displays the following if all your RAGFlow components are running properly:* 
+*The system displays the following if all your Tessi ai. components are running properly:* 
 
 ```
 5bc45806b680   infiniflow/ragflow:latest     "./entrypoint.sh"        11 hours ago   Up 11 hours               0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp, 0.0.0.0:9380->9380/tcp, :::9380->9380/tcp   ragflow-server
@@ -254,7 +254,7 @@ cd29bcb254bc   quay.io/minio/minio:RELEASE.2023-12-20T01-00-02Z       "/usr/bin/
 ```bash
 $ docker ps
 ```
-   *The status of a 'healthy' Elasticsearch component in your RAGFlow should look as follows:*
+   *The status of a 'healthy' Elasticsearch component in your Tessi ai. should look as follows:*
 ```
 91220e3285dd   docker.elastic.co/elasticsearch/elasticsearch:8.11.3   "/bin/tini -- /usr/l…"   11 hours ago   Up 11 hours (healthy)     9300/tcp, 0.0.0.0:9200->9200/tcp, :::9200->9200/tcp           ragflow-es-01
 ```
@@ -264,12 +264,12 @@ $ docker ps
 
 3. If your issue persists, ensure that the ES host setting is correct:
 
-    - If you are running RAGFlow with Docker, it is in **docker/service_conf.yml**. Set it as follows:
+    - If you are running Tessi ai. with Docker, it is in **docker/service_conf.yml**. Set it as follows:
     ```
     es:
       hosts: 'http://es01:9200'
     ```
-    - If you run RAGFlow outside of Docker, verify the ES host setting in **conf/service_conf.yml** using: 
+    - If you run Tessi ai. outside of Docker, verify the ES host setting in **conf/service_conf.yml** using: 
     ```bash
     curl http://<IP_OF_ES>:<PORT_OF_ES>
     ```
@@ -287,13 +287,13 @@ Your IP address or port number may be incorrect. If you are using the default co
 A correct Ollama IP address and port is crucial to adding models to Ollama:
 
 - If you are on demo.ragflow.io, ensure that the server hosting Ollama has a publicly accessible IP address.Note that 127.0.0.1 is not a publicly accessible IP address.
-- If you deploy RAGFlow locally, ensure that Ollama and RAGFlow are in the same LAN and can comunicate with each other.
+- If you deploy Tessi ai. locally, ensure that Ollama and Tessi ai. are in the same LAN and can comunicate with each other.
 
 #### 4.12 Do you offer examples of using deepdoc to parse PDF or other files?
 
 Yes, we do. See the Python files under the **rag/app** folder. 
 
-#### 4.13 Why did I fail to upload a 10MB+ file to my locally deployed RAGFlow?
+#### 4.13 Why did I fail to upload a 10MB+ file to my locally deployed Tessi ai.?
 
 You probably forgot to update the **MAX_CONTENT_LENGTH** environment variable:
 
@@ -306,7 +306,7 @@ MAX_CONTENT_LENGTH=100000000
 environment:
   - MAX_CONTENT_LENGTH=${MAX_CONTENT_LENGTH}
 ```
-3. Restart the RAGFlow server:
+3. Restart the Tessi ai. server:
 ```
 docker compose up ragflow -d
 ```
@@ -314,7 +314,7 @@ docker compose up ragflow -d
 
 #### 4.14 `Table 'rag_flow.document' doesn't exist`
 
-This exception occurs when starting up the RAGFlow server. Try the following: 
+This exception occurs when starting up the Tessi ai. server. Try the following: 
 
   1. Prolong the sleep time: Go to **docker/entrypoint.sh**, locate line 26, and replace `sleep 60` with `sleep 280`.
   2. If using Windows, ensure that the **entrypoint.sh** has LF end-lines.
@@ -326,11 +326,11 @@ This exception occurs when starting up the RAGFlow server. Try the following:
   ```bash
   cd docker
   ```
-  5. Stop the RAGFlow server:
+  5. Stop the Tessi ai. server:
   ```bash
   docker compose stop
   ```
-  6. Restart up the RAGFlow server:
+  6. Restart up the Tessi ai. server:
   ```bash
   docker compose up
   ```
@@ -339,7 +339,7 @@ This exception occurs when starting up the RAGFlow server. Try the following:
 
 ![hint102](https://github.com/infiniflow/ragflow/assets/93570324/6633d892-b4f8-49b5-9a0a-37a0a8fba3d2)
 
-1. Ensure that the RAGFlow server can access the base URL.
+1. Ensure that the Tessi ai. server can access the base URL.
 2. Do not forget to append **/v1/** to **http://IP:port**: 
    **http://IP:port/v1/**
 
@@ -353,7 +353,7 @@ This exception occurs when starting up the RAGFlow server. Try the following:
 
 ## Usage
 
-### 1. How to increase the length of RAGFlow responses?
+### 1. How to increase the length of Tessi ai. responses?
 
 1. Right click the desired dialog to display the **Chat Configuration** window.
 2. Switch to the **Model Setting** tab and adjust the **Max Tokens** slider to get the desired length.
@@ -368,16 +368,16 @@ You limit what the system responds to what you specify in **Empty response** if 
 
 ![](https://github.com/infiniflow/ragflow/assets/93570324/8cfb6fa4-8a97-415d-b9fa-b6f405a055f3)
 
-### 4. How to run RAGFlow with a locally deployed LLM?
+### 4. How to run Tessi ai. with a locally deployed LLM?
 
 You can use Ollama to deploy local LLM. See [here](https://github.com/infiniflow/ragflow/blob/main/docs/guides/deploy_local_llm.md) for more information. 
 
 ### 5. How to link up ragflow and ollama servers?
 
-- If RAGFlow is locally deployed, ensure that your RAGFlow and Ollama are in the same LAN. 
+- If Tessi ai. is locally deployed, ensure that your Tessi ai. and Ollama are in the same LAN. 
 - If you are using our online demo, ensure that the IP address of your Ollama server is public and accessible.
 
-### 6. How to configure RAGFlow to respond with 100% matched results, rather than utilizing LLM?
+### 6. How to configure Tessi ai. to respond with 100% matched results, rather than utilizing LLM?
 
 1. Click **Knowledge Base** in the middle top of the page.
 2. Right click the desired knowledge base to display the **Configuration** dialogue. 
@@ -398,29 +398,29 @@ This error occurs because there are too many chunks matching your search criteri
 
 ![topn](https://github.com/infiniflow/ragflow/assets/93570324/7ec72ab3-0dd2-4cff-af44-e2663b67b2fc)
 
-### 9. How to upgrade RAGFlow?
+### 9. How to upgrade Tessi ai.?
    
-You can upgrade RAGFlow to either the dev version or the latest version:
+You can upgrade Tessi ai. to either the dev version or the latest version:
 
 - Dev versions are for developers and contributors. They are published on a nightly basis and may crash because they are not fully tested. We cannot guarantee their validity and you are at your own risk trying out latest, untested features.
 - The latest version refers to the most recent, officially published release. It is stable and works best with regular users.
 
 
-To upgrade RAGFlow to the dev version:
+To upgrade Tessi ai. to the dev version:
 
 1. Pull the latest source code
    ```bash
    cd ragflow
    git pull
    ```
-2. If you used `docker compose up -d` to start up RAGFlow server:
+2. If you used `docker compose up -d` to start up Tessi ai. server:
    ```bash
    docker pull infiniflow/ragflow:dev
    ```
    ```bash
    docker compose up ragflow -d
    ```
-3. If you used `docker compose -f docker-compose-CN.yml up -d` to start up RAGFlow server:
+3. If you used `docker compose -f docker-compose-CN.yml up -d` to start up Tessi ai. server:
    ```bash
    docker pull swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow:dev
    ```
@@ -428,7 +428,7 @@ To upgrade RAGFlow to the dev version:
    docker compose -f docker-compose-CN.yml up -d
    ```
    
-To upgrade RAGFlow to the latest version:
+To upgrade Tessi ai. to the latest version:
 
 1. Update **ragflow/docker/.env** as follows:
    ```bash
@@ -440,14 +440,14 @@ To upgrade RAGFlow to the latest version:
    git pull
    ```   
 
-3. If you used `docker compose up -d` to start up RAGFlow server:
+3. If you used `docker compose up -d` to start up Tessi ai. server:
    ```bash
    docker pull infiniflow/ragflow:latest
    ```
    ```bash
    docker compose up ragflow -d
    ```
-4. If you used `docker compose -f docker-compose-CN.yml up -d` to start up RAGFlow server:
+4. If you used `docker compose -f docker-compose-CN.yml up -d` to start up Tessi ai. server:
    ```bash
    docker pull swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow:latest
    ```

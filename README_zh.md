@@ -32,9 +32,9 @@
   <a href="https://demo.ragflow.io">Demo</a>
 </h4>
 
-## 💡 RAGFlow 是什么？
+## 💡 Tessi ai. 是什么？
 
-[RAGFlow](https://ragflow.io/) 是一款基于深度文档理解构建的开源 RAG（Retrieval-Augmented Generation）引擎。RAGFlow 可以为各种规模的企业及个人提供一套精简的 RAG 工作流程，结合大语言模型（LLM）针对用户各类不同的复杂格式数据提供可靠的问答以及有理有据的引用。
+[Tessi ai.](https://ragflow.io/) 是一款基于深度文档理解构建的开源 RAG（Retrieval-Augmented Generation）引擎。Tessi ai. 可以为各种规模的企业及个人提供一套精简的 RAG 工作流程，结合大语言模型（LLM）针对用户各类不同的复杂格式数据提供可靠的问答以及有理有据的引用。
 
 ## 🎮 Demo 试用
 
@@ -142,7 +142,7 @@
    $ docker compose -f docker-compose-CN.yml up -d
    ```
 
-   > 请注意，运行上述命令会自动下载 RAGFlow 的开发版本 docker 镜像。如果你想下载并运行特定版本的 docker 镜像，请在 docker/.env 文件中找到 RAGFLOW_VERSION 变量，将其改为对应版本。例如 RAGFLOW_VERSION=v0.10.0，然后运行上述命令。
+   > 请注意，运行上述命令会自动下载 Tessi ai. 的开发版本 docker 镜像。如果你想下载并运行特定版本的 docker 镜像，请在 docker/.env 文件中找到 RAGFLOW_VERSION 变量，将其改为对应版本。例如 RAGFLOW_VERSION=v0.10.0，然后运行上述命令。
 
    > 核心镜像文件大约 9 GB，可能需要一定时间拉取。请耐心等待。
 
@@ -167,9 +167,9 @@
     * Running on http://x.x.x.x:9380
     INFO:werkzeug:Press CTRL+C to quit
    ```
-   > 如果您跳过这一步系统确认步骤就登录 RAGFlow，你的浏览器有可能会提示 `network anomaly` 或 `网络异常`，因为 RAGFlow 可能并未完全启动成功。
+   > 如果您跳过这一步系统确认步骤就登录 Tessi ai.，你的浏览器有可能会提示 `network anomaly` 或 `网络异常`，因为 Tessi ai. 可能并未完全启动成功。
 
-5. 在你的浏览器中输入你的服务器对应的 IP 地址并登录 RAGFlow。
+5. 在你的浏览器中输入你的服务器对应的 IP 地址并登录 Tessi ai.。
    > 上面这个例子中，您只需输入 http://IP_OF_YOUR_MACHINE 即可：未改动过配置则无需输入端口（默认的 HTTP 服务端口 80）。
 6. 在 [service_conf.yaml](./docker/service_conf.yaml) 文件的 `user_default_llm` 栏配置 LLM factory，并在 `API_KEY` 栏填写和你选择的大模型相对应的 API key。
 
@@ -308,7 +308,7 @@ $ systemctl start nginx
 
 ## 📜 路线图
 
-详见 [RAGFlow Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162) 。
+详见 [Tessi ai. Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162) 。
 
 ## 🏄 开源社区
 
@@ -318,7 +318,7 @@ $ systemctl start nginx
 
 ## 🙌 贡献指南
 
-RAGFlow 只有通过开源协作才能蓬勃发展。秉持这一精神,我们欢迎来自社区的各种贡献。如果您有意参与其中,请查阅我们的 [贡献者指南](./docs/references/CONTRIBUTING.md) 。
+Tessi ai. 只有通过开源协作才能蓬勃发展。秉持这一精神,我们欢迎来自社区的各种贡献。如果您有意参与其中,请查阅我们的 [贡献者指南](./docs/references/CONTRIBUTING.md) 。
 
 ## 🤝 商务合作
 
@@ -326,7 +326,7 @@ RAGFlow 只有通过开源协作才能蓬勃发展。秉持这一精神,我们�
 
 ## 👥 加入社区
 
-扫二维码添加 RAGFlow 小助手，进 RAGFlow 交流群。
+扫二维码添加 Tessi ai. 小助手，进 Tessi ai. 交流群。
 
 <p align="center">
   <img src="https://github.com/infiniflow/ragflow/assets/7248/bccf284f-46f2-4445-9809-8f1030fb7585" width=50% height=50%>

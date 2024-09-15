@@ -161,7 +161,7 @@ def remove_dataset(dataset_id):
                 # the process of deleting failed
                 return construct_json_result(code=RetCode.DATA_ERROR,
                                              message="There was an error during the document removal process. "
-                                                     "Please check the status of the RAGFlow server and try the removal again.")
+                                                     "Please check the status of the Tessi ai. server and try the removal again.")
             # delete the other files
             f2d = File2DocumentService.get_by_document_id(doc.id)
             FileService.filter_delete([File.source_type == FileSource.KNOWLEDGEBASE, File.id == f2d[0].file_id])
@@ -171,7 +171,7 @@ def remove_dataset(dataset_id):
         if not KnowledgebaseService.delete_by_id(dataset_id):
             return construct_json_result(code=RetCode.DATA_ERROR,
                                          message="There was an error during the dataset removal process. "
-                                                 "Please check the status of the RAGFlow server and try the removal again.")
+                                                 "Please check the status of the Tessi ai. server and try the removal again.")
         # success
         return construct_json_result(code=RetCode.SUCCESS, message=f"Remove dataset: {dataset_id} successfully")
     except Exception as e:
@@ -269,7 +269,7 @@ def update_dataset(dataset_id):
         # update
         if not KnowledgebaseService.update_by_id(dataset.id, dataset_updating_data):
             return construct_json_result(code=RetCode.OPERATING_ERROR, message="Failed to update! "
-                                                                               "Please check the status of RAGFlow "
+                                                                               "Please check the status of Tessi ai. "
                                                                                "server and try again!")
 
         exist, dataset = KnowledgebaseService.get_by_id(dataset.id)
@@ -430,7 +430,7 @@ def delete_document(document_id, dataset_id):  # string
         if not DocumentService.remove_document(doc, tenant_id):
             return construct_json_result(
                 message="There was an error during the document removal process. Please check the status of the "
-                        "RAGFlow server and try the removal again.", code=RetCode.OPERATING_ERROR)
+                        "Tessi ai. server and try the removal again.", code=RetCode.OPERATING_ERROR)
 
         # fetch the File2Document record associated with the provided document ID.
         file_to_doc = File2DocumentService.get_by_document_id(document_id)
@@ -554,7 +554,7 @@ def update_document(dataset_id, document_id):
             return construct_json_result(
                 code=RetCode.OPERATING_ERROR,
                 message="Failed to update document in the database! "
-                        "Please check the status of RAGFlow server and try again!")
+                        "Please check the status of Tessi ai. server and try again!")
 
         # name part: file service
         if "name" in req:
@@ -823,7 +823,7 @@ def stop_parsing_document_internal(document_id):
                 return construct_json_result(
                     code=RetCode.OPERATING_ERROR,
                     message="There was an error during the stopping parsing the document process. "
-                            "Please check the status of the RAGFlow server and try the update again."
+                            "Please check the status of the Tessi ai. server and try the update again."
                 )
 
             _, doc_attributes = DocumentService.get_by_id(document_id)

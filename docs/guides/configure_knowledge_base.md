@@ -5,7 +5,7 @@ slug: /configure_knowledge_base
 
 # Configure a knowledge base
 
-Knowledge base, hallucination-free chat, and file management are the three pillars of RAGFlow. RAGFlow's AI chats are based on knowledge bases. Each of RAGFlow's knowledge bases serves as a knowledge source, *parsing* files uploaded from your local machine and file references generated in **File Management** into the real 'knowledge' for future AI chats. This guide demonstrates some basic usages of the knowledge base feature, covering the following topics:
+Knowledge base, hallucination-free chat, and file management are the three pillars of Tessi ai.. Tessi ai.'s AI chats are based on knowledge bases. Each of Tessi ai.'s knowledge bases serves as a knowledge source, *parsing* files uploaded from your local machine and file references generated in **File Management** into the real 'knowledge' for future AI chats. This guide demonstrates some basic usages of the knowledge base feature, covering the following topics:
 
 - Create a knowledge base
 - Configure a knowledge base
@@ -37,7 +37,7 @@ This section covers the following topics:
 
 ### Select chunk method
 
-RAGFlow offers multiple chunking template to facilitate chunking files of different layouts and ensure semantic integrity. In **Chunk method**, you can choose the default template that suits the layouts and formats of your files. The following table shows the descriptions and the compatible file formats of each supported chunk template:
+Tessi ai. offers multiple chunking template to facilitate chunking files of different layouts and ensure semantic integrity. In **Chunk method**, you can choose the default template that suits the layouts and formats of your files. The following table shows the descriptions and the compatible file formats of each supported chunk template:
 
 | **Template** | Description                                                  | File format                                          |
 | ------------ | ------------------------------------------------------------ | ---------------------------------------------------- |
@@ -75,25 +75,25 @@ The following embedding models can be deployed locally:
 
 ### Upload file
 
-- RAGFlow's **File Management** allows you to link a file to multiple knowledge bases, in which case each target knowledge base holds a reference to the file.
+- Tessi ai.'s **File Management** allows you to link a file to multiple knowledge bases, in which case each target knowledge base holds a reference to the file.
 - In **Knowledge Base**, you are also given the option of uploading a single file or a folder of files (bulk upload) from your local machine to a knowledge base, in which case the knowledge base holds file copies. 
 
 While uploading files directly to a knowledge base seems more convenient, we *highly* recommend uploading files to **File Management** and then linking them to the target knowledge bases. This way, you can avoid permanently deleting files uploaded to the knowledge base. 
 
 ### Parse file
 
-File parsing is a crucial topic in knowledge base configuration. The meaning of file parsing in RAGFlow is twofold: chunking files based on file layout and building embedding and full-text (keyword) indexes on these chunks. After having selected the chunk method and embedding model, you can start parsing an file:
+File parsing is a crucial topic in knowledge base configuration. The meaning of file parsing in Tessi ai. is twofold: chunking files based on file layout and building embedding and full-text (keyword) indexes on these chunks. After having selected the chunk method and embedding model, you can start parsing an file:
 
 ![parse file](https://github.com/infiniflow/ragflow/assets/93570324/5311f166-6426-447f-aa1f-bd488f1cfc7b)
 
 - Click the play button next to **UNSTART** to start file parsing.
 - Click the red-cross icon and then refresh, if your file parsing stalls for a long time. 
-- As shown above, RAGFlow allows you to use a different chunk method for a particular file, offering flexibility beyond the default method. 
-- As shown above, RAGFlow allows you to enable or disable individual files, offering finer control over knowledge base-based AI chats. 
+- As shown above, Tessi ai. allows you to use a different chunk method for a particular file, offering flexibility beyond the default method. 
+- As shown above, Tessi ai. allows you to enable or disable individual files, offering finer control over knowledge base-based AI chats. 
 
 ### Intervene with file parsing results
 
-RAGFlow features visibility and explainability, allowing you to view the chunking results and intervene where necessary. To do so: 
+Tessi ai. features visibility and explainability, allowing you to view the chunking results and intervene where necessary. To do so: 
 
 1. Click on the file that completes file parsing to view the chunking results: 
 
@@ -113,13 +113,13 @@ You can add keywords to a file chunk to increase its relevance. This action incr
 
 4. In Retrieval testing, ask a quick question in **Test text** to double check if your configurations work:
 
-   _As you can tell from the following, RAGFlow responds with truthful citations._
+   _As you can tell from the following, Tessi ai. responds with truthful citations._
 
    ![retrieval test](https://github.com/infiniflow/ragflow/assets/93570324/c03f06f6-f41f-4b20-a97e-ae405d3a950c)
 
 ### Run retrieval testing
 
-RAGFlow uses multiple recall of both full-text search and vector search in its chats. Prior to setting up an AI chat, consider adjusting the following parameters to ensure that the intended information always turns up in answers:
+Tessi ai. uses multiple recall of both full-text search and vector search in its chats. Prior to setting up an AI chat, consider adjusting the following parameters to ensure that the intended information always turns up in answers:
 
 - Similarity threshold: Chunks with similarities below the threshold will be filtered. Defaultly set to 0.2.
 - Vector similarity weight: The percentage by which vector similarity contributes to the overall score. Defaultly set to 0.3.
@@ -128,7 +128,7 @@ RAGFlow uses multiple recall of both full-text search and vector search in its c
 
 ## Search for knowledge base
 
-As of RAGFlow v0.10.0, the search feature is still in a rudimentary form, supporting only knowledge base search by name.
+As of Tessi ai. v0.10.0, the search feature is still in a rudimentary form, supporting only knowledge base search by name.
 
 ![search knowledge base](https://github.com/infiniflow/ragflow/assets/93570324/836ae94c-2438-42be-879e-c7ad2a59693e)
 

@@ -1,6 +1,6 @@
 from api.settings import RetCode
 from test_sdkbase import TestSdk
-from ragflow import RAGFlow
+from ragflow import Tessi ai.
 import pytest
 from common import API_KEY, HOST_ADDRESS
 
@@ -31,7 +31,7 @@ class TestFile(TestSdk):
         """
         Test uploading two files with success.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_two_files")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt", "test_data/test1.txt"]
@@ -42,7 +42,7 @@ class TestFile(TestSdk):
         """
         Test uploading one file with success.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_one_file")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt"]
@@ -53,7 +53,7 @@ class TestFile(TestSdk):
         """
         Test uploading a file which does not exist.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_nonexistent_files")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/imagination.txt"]
@@ -64,7 +64,7 @@ class TestFile(TestSdk):
         """
         Test uploading files if the dataset id does not exist.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         file_paths = ["test_data/test.txt"]
         res = ragflow.upload_local_file("111", file_paths)
         assert res["code"] == RetCode.DATA_ERROR and res["message"] == "Can't find this dataset"
@@ -73,7 +73,7 @@ class TestFile(TestSdk):
         """
         Test uploading files that do not have name.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_file_without_name")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/.txt"]
@@ -84,7 +84,7 @@ class TestFile(TestSdk):
         """
         Test uploading files that do not have name.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_file_without_name")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/.txt", "test_data/empty.txt"]
@@ -95,7 +95,7 @@ class TestFile(TestSdk):
         """
         Test uploading files whose number exceeds the limit.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_files_exceeding_the_number_limit")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt", "test_data/test1.txt"] * 256
@@ -108,7 +108,7 @@ class TestFile(TestSdk):
         """
         Test uploading files without files.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_files_without_files")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = [None]
@@ -119,7 +119,7 @@ class TestFile(TestSdk):
         """
         Test uploading files with the same name.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_files_with_two_files_with_same_name")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt"] * 2
@@ -130,7 +130,7 @@ class TestFile(TestSdk):
         """
         Test uploading files with only specifying the file path's repo.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_files_with_file_paths")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/"]
@@ -141,7 +141,7 @@ class TestFile(TestSdk):
         """
         Test uploading files with remote files.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_upload_files_with_remote_file_path")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["https://github.com/genostack/ragflow"]
@@ -153,7 +153,7 @@ class TestFile(TestSdk):
         """
         Test deleting one file with success.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_delete_one_file")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt"]
@@ -170,7 +170,7 @@ class TestFile(TestSdk):
         """
         Test deleting a document that does not exist with failure.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_delete_document_with_not_existing_document")
         dataset_id = created_res["data"]["dataset_id"]
         res = ragflow.delete_files("111", dataset_id)
@@ -181,7 +181,7 @@ class TestFile(TestSdk):
         Test deleting documents when uploading 100 docs and deleting 100 docs.
         """
         # upload 100 docs
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_delete_one_file")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt"] * 100
@@ -200,7 +200,7 @@ class TestFile(TestSdk):
         """
         Test deleting documents from a non-existent dataset
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_delete_one_file")
         dataset_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt"]
@@ -218,7 +218,7 @@ class TestFile(TestSdk):
         """
         Test deleting a document which is located in other dataset.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         # upload a document
         created_res = ragflow.create_dataset("test_delete_document_which_is_located_in_other_dataset")
         created_res_id = created_res["data"]["dataset_id"]
@@ -241,7 +241,7 @@ class TestFile(TestSdk):
         """
         Test listing documents with a successful outcome.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         # upload a document
         created_res = ragflow.create_dataset("test_list_documents_with_success")
         created_res_id = created_res["data"]["dataset_id"]
@@ -255,7 +255,7 @@ class TestFile(TestSdk):
         """
         Test listing documents and verify the size and names of the documents.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         # upload 10 documents
         created_res = ragflow.create_dataset("test_list_documents_with_checking_size")
         created_res_id = created_res["data"]["dataset_id"]
@@ -269,7 +269,7 @@ class TestFile(TestSdk):
         """
         Test listing documents that should be empty.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         # upload 0 documents
         created_res = ragflow.create_dataset("test_list_documents_with_getting_empty_result")
         created_res_id = created_res["data"]["dataset_id"]
@@ -281,7 +281,7 @@ class TestFile(TestSdk):
         """
         Test listing 100 documents and verify the size of these documents.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         # upload 100 documents
         created_res = ragflow.create_dataset("test_list_documents_with_creating_100_documents")
         created_res_id = created_res["data"]["dataset_id"]
@@ -295,7 +295,7 @@ class TestFile(TestSdk):
         """
         Test listing documents with IndexError.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_list_document_with_failure")
         created_res_id = created_res["data"]["dataset_id"]
         response = ragflow.list_files(created_res_id, offset=-1, count=-1)
@@ -305,7 +305,7 @@ class TestFile(TestSdk):
         """
         Test listing documents with verifying the functionalities of offset and count.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_list_document_with_verifying_offset_and_count")
         created_res_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt", "test_data/empty.txt"] * 10
@@ -319,7 +319,7 @@ class TestFile(TestSdk):
         """
         Test listing documents with verifying the functionality of searching keywords.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_list_document_with_verifying_keywords")
         created_res_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt", "test_data/empty.txt"]
@@ -333,7 +333,7 @@ class TestFile(TestSdk):
         """
         Test listing documents with verifying the functionality of order_by and descend.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_list_document_with_verifying_order_by_and_descend")
         created_res_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt", "test_data/empty.txt"]
@@ -352,7 +352,7 @@ class TestFile(TestSdk):
         """
         Test listing documents with verifying the functionality of order_by and ascend.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_list_document_with_verifying_order_by_and_ascend")
         created_res_id = created_res["data"]["dataset_id"]
         file_paths = ["test_data/test.txt", "test_data/test1.txt", "test_data/empty.txt"]
@@ -374,7 +374,7 @@ class TestFile(TestSdk):
         """
         Test updating a document which does not exist.
         """
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         params = {
@@ -388,7 +388,7 @@ class TestFile(TestSdk):
         Test updating a document without giving parameters.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_without_parameters")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -409,7 +409,7 @@ class TestFile(TestSdk):
         Test updating a document in the nonexistent dataset.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_in_nonexistent_dataset")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -431,7 +431,7 @@ class TestFile(TestSdk):
         Test the updating of a document with an extension name that differs from its original.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_different_extension_name")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -453,7 +453,7 @@ class TestFile(TestSdk):
         Test the updating of a document with a duplicate name.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_different_extension_name")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -475,7 +475,7 @@ class TestFile(TestSdk):
         Test the updating of a document's name with success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_its_name_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -497,7 +497,7 @@ class TestFile(TestSdk):
         Test the updating of a document's template type with success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_its_template_type_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -519,7 +519,7 @@ class TestFile(TestSdk):
         Test the updating of a document's enable value with success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_its_enable_value_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -541,7 +541,7 @@ class TestFile(TestSdk):
         Test the updating of a document's illegal parameter.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_illegal_parameter")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -563,7 +563,7 @@ class TestFile(TestSdk):
         Test the updating of a document's name without its name value.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_its_name_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -585,7 +585,7 @@ class TestFile(TestSdk):
         Test the updating of a document's with giving illegal enable's value.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_its_name_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -607,7 +607,7 @@ class TestFile(TestSdk):
         Test the updating of a document's with giving illegal type's value.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_update_document_with_updating_its_name_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -631,7 +631,7 @@ class TestFile(TestSdk):
         Test downloading a document which does not exist.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         res = ragflow.download_file(created_res_id, "imagination")
@@ -642,7 +642,7 @@ class TestFile(TestSdk):
         Test downloading a document whose dataset is nonexistent.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -660,7 +660,7 @@ class TestFile(TestSdk):
         Test the downloading of a document with success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -680,7 +680,7 @@ class TestFile(TestSdk):
         Test the downloading of an empty document.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -699,7 +699,7 @@ class TestFile(TestSdk):
         Test the parsing of a document with success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_start_parsing_document_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -717,7 +717,7 @@ class TestFile(TestSdk):
         Test the parsing a document which does not exist.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_start_parsing_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         res = ragflow.start_parsing_document(created_res_id, "imagination")
@@ -728,7 +728,7 @@ class TestFile(TestSdk):
         Test the parsing a document whose dataset is nonexistent.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -746,7 +746,7 @@ class TestFile(TestSdk):
         Test the parsing of an empty document.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -764,7 +764,7 @@ class TestFile(TestSdk):
         Test the parsing documents whose dataset is nonexistent.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -779,7 +779,7 @@ class TestFile(TestSdk):
         Test the parsing documents with a success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -793,7 +793,7 @@ class TestFile(TestSdk):
         Test the parsing documents, one of which is empty.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -807,7 +807,7 @@ class TestFile(TestSdk):
         Test the parsing documents whose document ids are specified.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -826,7 +826,7 @@ class TestFile(TestSdk):
         Test the re-parsing documents.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -848,7 +848,7 @@ class TestFile(TestSdk):
         Test the re-parsing documents after changing the parser id.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -875,7 +875,7 @@ class TestFile(TestSdk):
         Test the re-parsing documents after changing an illegal parser id.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -903,7 +903,7 @@ class TestFile(TestSdk):
         Test the parsing documents after changing an illegal parser id.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -929,7 +929,7 @@ class TestFile(TestSdk):
         Test the parsing documents whose dataset's parser id is illegal.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_start_parsing_multiple_documents_in_the_dataset_whose_parser_id_is_illegal")
         created_res_id = created_res["data"]["dataset_id"]
         # update the parser id
@@ -956,7 +956,7 @@ class TestFile(TestSdk):
         Test the stopping parsing of a document with success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_start_parsing_document_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -976,7 +976,7 @@ class TestFile(TestSdk):
         Test the stopping parsing a document which does not exist.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_start_parsing_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         res = ragflow.stop_parsing_document(created_res_id, "imagination.txt")
@@ -987,7 +987,7 @@ class TestFile(TestSdk):
         Test the stopping parsing a document whose dataset is nonexistent.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -1006,7 +1006,7 @@ class TestFile(TestSdk):
         Test the stopping parsing documents whose dataset is nonexistent.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_download_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -1021,7 +1021,7 @@ class TestFile(TestSdk):
         Test the stopping parsing documents with a success.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -1038,7 +1038,7 @@ class TestFile(TestSdk):
         Test the stopping parsing documents, one of which is empty.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -1054,7 +1054,7 @@ class TestFile(TestSdk):
         Test the stopping parsing documents whose document ids are specified.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset(" test_start_parsing_multiple_documents")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -1073,7 +1073,7 @@ class TestFile(TestSdk):
 # ----------------------------show the status of the file-----------------------------------------------------
     def test_show_status_with_success(self):
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_show_status_with_success")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files
@@ -1094,7 +1094,7 @@ class TestFile(TestSdk):
         Test showing the status of a document which does not exist.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_show_status_nonexistent_document")
         created_res_id = created_res["data"]["dataset_id"]
         res = ragflow.show_parsing_status(created_res_id, "imagination")
@@ -1105,7 +1105,7 @@ class TestFile(TestSdk):
         Test showing the status of a document whose dataset is nonexistent.
         """
         # create a dataset
-        ragflow = RAGFlow(API_KEY, HOST_ADDRESS)
+        ragflow = Tessi ai.(API_KEY, HOST_ADDRESS)
         created_res = ragflow.create_dataset("test_show_status_document_in_nonexistent_dataset")
         created_res_id = created_res["data"]["dataset_id"]
         # upload files

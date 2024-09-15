@@ -7,6 +7,7 @@
     "postinstall": "umi setup",
     "lint": "umi lint --eslint-only",
     "prepare": "cd .. && husky web/.husky",
+    "serve": "serve -s dist -l 9222",
     "setup": "umi setup",
     "start": "npm run dev",
     "test": "jest --no-cache --coverage"

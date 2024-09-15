@@ -35,7 +35,7 @@
 <details open>
 <summary></b>📕 Table of Contents</b></summary>
   
-- 💡 [What is RAGFlow?](#-what-is-ragflow)
+- 💡 [What is Tessi ai.?](#-what-is-ragflow)
 - 🎮 [Demo](#-demo)
 - 📌 [Latest Updates](#-latest-updates)
 - 🌟 [Key Features](#-key-features)
@@ -51,9 +51,9 @@
 
 </details>
 
-## 💡 What is RAGFlow?
+## 💡 What is Tessi ai.?
 
-[RAGFlow](https://ragflow.io/) is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding. It offers a streamlined RAG workflow for businesses of any scale, combining LLM (Large Language Models) to provide truthful question-answering capabilities, backed by well-founded citations from various complex formatted data.
+[Tessi ai.](https://ragflow.io/) is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding. It offers a streamlined RAG workflow for businesses of any scale, combining LLM (Large Language Models) to provide truthful question-answering capabilities, backed by well-founded citations from various complex formatted data.
 
 ## 🎮 Demo
 
@@ -160,7 +160,7 @@ Try our demo at [https://demo.ragflow.io](https://demo.ragflow.io).
 
 3. Build the pre-built Docker images and start up the server:
 
-   > Running the following commands automatically downloads the *dev* version RAGFlow Docker image. To download and run a specified Docker version, update `RAGFLOW_VERSION` in **docker/.env** to the intended version, for example `RAGFLOW_VERSION=v0.10.0`, before running the following commands.
+   > Running the following commands automatically downloads the *dev* version Tessi ai. Docker image. To download and run a specified Docker version, update `RAGFLOW_VERSION` in **docker/.env** to the intended version, for example `RAGFLOW_VERSION=v0.10.0`, before running the following commands.
 
    ```bash
    $ cd ragflow/docker
@@ -192,9 +192,9 @@ Try our demo at [https://demo.ragflow.io](https://demo.ragflow.io).
     * Running on http://x.x.x.x:9380
     INFO:werkzeug:Press CTRL+C to quit
    ```
-   > If you skip this confirmation step and directly log in to RAGFlow, your browser may prompt a `network anomaly` error because, at that moment, your RAGFlow may not be fully initialized.  
+   > If you skip this confirmation step and directly log in to Tessi ai., your browser may prompt a `network anomaly` error because, at that moment, your Tessi ai. may not be fully initialized.  
 
-5. In your web browser, enter the IP address of your server and log in to RAGFlow.
+5. In your web browser, enter the IP address of your server and log in to Tessi ai..
    > With the default settings, you only need to enter `http://IP_OF_YOUR_MACHINE` (**sans** port number) as the default HTTP serving port `80` can be omitted when using the default configurations.
 6. In [service_conf.yaml](./docker/service_conf.yaml), select the desired LLM factory in `user_default_llm` and update the `API_KEY` field with the corresponding API key.
 
@@ -297,7 +297,7 @@ To launch the service from source:
    - The settings in **docker/.env** match those in **conf/service_conf.yaml**. 
    - The IP addresses and ports for related services in **service_conf.yaml** match the local machine IP and ports exposed by the container.
 
-6. Launch the RAGFlow backend service:
+6. Launch the Tessi ai. backend service:
 
    ```bash
    $ chmod +x ./entrypoint.sh
@@ -338,7 +338,7 @@ To launch the service from source:
 
 ## 📜 Roadmap
 
-See the [RAGFlow Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162)
+See the [Tessi ai. Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162)
 
 ## 🏄 Community
 
@@ -348,4 +348,4 @@ See the [RAGFlow Roadmap 2024](https://github.com/infiniflow/ragflow/issues/162)
 
 ## 🙌 Contributing
 
-RAGFlow flourishes via open-source collaboration. In this spirit, we embrace diverse contributions from the community. If you would like to be a part, review our [Contribution Guidelines](./docs/references/CONTRIBUTING.md) first.
+Tessi ai. flourishes via open-source collaboration. In this spirit, we embrace diverse contributions from the community. If you would like to be a part, review our [Contribution Guidelines](./docs/references/CONTRIBUTING.md) first.
