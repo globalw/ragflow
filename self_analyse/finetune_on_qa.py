@@ -39,12 +39,12 @@ class CustomDataset(Dataset):
                     if question and answer:
                         self.data.append(sample)
                     else:
-                        print(f"Skipping empty sample: {line}")
+                        logger.debug(f"Skipping empty sample: {line}")
                 else:
-                    print(f"Skipping invalid sample: {line}")
+                    logger.debug(f"Skipping invalid sample: {line}")
 
         # Check the length of the dataset
-        print(f"Loaded {len(self.data)} samples")
+        logger.info(f"Loaded {len(self.data)} samples")
 
     def __len__(self):
         return len(self.data)
@@ -67,10 +67,10 @@ class CustomDataset(Dataset):
             max_length=self.max_length,
             return_tensors='pt',
         )
-
+        logger.info(f"Tokenized input: {tokenized}")
         input_ids = tokenized.input_ids.squeeze()
         attention_mask = tokenized.attention_mask.squeeze()
-
+        logger.info(f"Input IDs: {input_ids}")
         # Create labels by copying input_ids
         labels = input_ids.clone()
 
@@ -81,12 +81,14 @@ class CustomDataset(Dataset):
             )['input_ids']
         )
         labels[:question_len] = -100  # Ignore the question part in loss computation
-
+        logger.info(f"Labels: {labels}")
         return {
             'input_ids': input_ids,
             'attention_mask': attention_mask,
             'labels': labels,
         }
+
+
 class HDTFineTuneGPT2:
     def __init__(self, model_name='gpt2', tokenizer_name=None):
         if tokenizer_name is None:
@@ -97,7 +99,7 @@ class HDTFineTuneGPT2:
             load_in_8bit=True,
             llm_int8_threshold=6.0
         )
-
+        logger.info(f"Quantization config: {quantization_config}")
         # Load tokenizer and model
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast=False)
         self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -107,7 +109,7 @@ class HDTFineTuneGPT2:
             quantization_config=quantization_config,
             device_map='auto',
         )
-
+        logger.info(f"Loaded model: {model_name}")
         # Set use_cache to False
         self.model.config.use_cache = False
 
@@ -126,9 +128,12 @@ class HDTFineTuneGPT2:
 
         # Apply LoRA
         self.model = get_peft_model(self.model, peft_config)
+        logger.info("LoRA applied to the model")
 
         # Enable gradient checkpointing with use_reentrant=False
         self.model.gradient_checkpointing_enable()
+        logger.info("Gradient checkpointing enabled")
+        logger.info("Model and tokenizer loaded")
 
     def fine_tune(
         self,
@@ -139,6 +144,8 @@ class HDTFineTuneGPT2:
         lr=2e-5,  # Adjusted learning rate
         max_steps=500,
     ):
+        logger.info("Starting fine-tuning process")
+
         training_args = TrainingArguments(
             output_dir=output_dir,
             overwrite_output_dir=True,
@@ -164,12 +171,12 @@ class HDTFineTuneGPT2:
             per_device_eval_batch_size=1,
             dataloader_pin_memory=True,
         )
-
+        logger.info("Training arguments set")
         # Data collator for language modeling
         data_collator = DataCollatorForLanguageModeling(
             tokenizer=self.tokenizer, mlm=False, pad_to_multiple_of=8
         )
-
+        logger.info("Data collator created")
         # Initialize the Trainer
         trainer = Trainer(
             model=self.model,
@@ -179,12 +186,13 @@ class HDTFineTuneGPT2:
             data_collator=data_collator,
             callbacks=[MemoryMonitorCallback()],
         )
-
+        logger.info("Trainer initialized")
         # Start fine-tuning
         logger.info("Starting training")
         trainer.train()
 
         # Save the fine-tuned model
+        logger.info("Training completed. Saving model")
         trainer.save_model(output_dir)
         self.tokenizer.save_pretrained(output_dir)
         logger.info(f"Model saved at {output_dir}")
