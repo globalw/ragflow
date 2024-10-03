@@ -67,10 +67,8 @@ class CustomDataset(Dataset):
             max_length=self.max_length,
             return_tensors='pt',
         )
-        logger.info(f"Tokenized input: {tokenized}")
         input_ids = tokenized.input_ids.squeeze()
         attention_mask = tokenized.attention_mask.squeeze()
-        logger.info(f"Input IDs: {input_ids}")
         # Create labels by copying input_ids
         labels = input_ids.clone()
 
@@ -81,7 +79,6 @@ class CustomDataset(Dataset):
             )['input_ids']
         )
         labels[:question_len] = -100  # Ignore the question part in loss computation
-        logger.info(f"Labels: {labels}")
         return {
             'input_ids': input_ids,
             'attention_mask': attention_mask,
